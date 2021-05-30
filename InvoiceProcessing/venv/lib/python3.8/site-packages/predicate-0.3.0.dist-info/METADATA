@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: predicate
+Version: 0.3.0
+Summary: Predicate Functions for Python in the style of django filters
+Home-page: https://gitlab.com/mc706/predicate
+Author: Ryan McDevitt
+Author-email: mcdevitt.ryan@gmail.com
+License: UNKNOWN
+Project-URL: Docs, https://predicate.readthedocs.io/en/stable/#
+Project-URL: Source, https://gitlab.com/mc706/predicate
+Project-URL: Bug Reports/Issues, https://gitlab.com/mc706/predicate/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: prospector ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+
+# Predicate
+[![PyPI version](https://badge.fury.io/py/predicate.svg)](https://badge.fury.io/py/predicate)
+[![pipeline status](https://gitlab.com/mc706/predicate/badges/master/pipeline.svg)](https://gitlab.com/mc706/predicate/commits/master)
+[![coverage report](https://gitlab.com/mc706/predicate/badges/master/coverage.svg)](https://gitlab.com/mc706/predicate/commits/master)
+[![PyPI](https://img.shields.io/pypi/pyversions/predicate.svg)](https://pypi.org/project/predicate/)
+[![Documentation Status](https://readthedocs.org/projects/predicate/badge/?version=latest)](https://predicate.readthedocs.io/en/latest/?badge=latest)
+
+Predicate takes the django queryset filtering language and applies it to building python native predicate functions that
+you can pass to the `filter` builtin. 
+
+
+This library is mean to make creating native python filter functions readable and easy:
+
+
+```python 
+>>> from predicate import where
+
+>>> people = [
+...     {'name': {'first': 'Joe', 'last': 'Smith'}, 'age': 25},
+...     {'name': {'first': 'Jane', 'last': 'Smith'}, 'age': 27},
+...     {'name': {'first': 'John', 'last': 'Smith'}, 'age': 33},
+...     {'name': {'first': 'Bill', 'last': 'Bob'}, 'age': 40},
+...     {'name': {'first': 'Joe', 'last': 'Bob'}, 'age': 59},
+... ]
+
+
+>>> young_smiths = list(filter(where(name__last__iexact='smith', age__lte=30), people))
+
+>>> young_smiths
+[{'name': {'first': 'Joe', 'last': 'Smith'}, 'age': 25}, {'name': {'first': 'Jane', 'last': 'Smith'}, 'age': 27}]
+
+```
+
+## Installation
+This project is distributed via `pip`. To get started:
+
+```
+pip install predicate
+```
+
+

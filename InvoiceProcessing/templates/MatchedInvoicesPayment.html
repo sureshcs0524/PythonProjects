@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice and Payment Matching Application</title>
+</head>
+<body>
+    <h2>Invoice and Payment Records -  Matched Invoices,Payment By Debit and Credit Amounts</h2>
+    <form method="post">
+        <button type="submit">Back</button>
+    </form>
+    {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+    {% endfor %}
+</body>
+</html>

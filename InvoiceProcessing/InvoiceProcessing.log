@@ -1,0 +1,29 @@
+INFO:root:Pymql Connection Established
+INFO:root:Open, read and Load Input files into database done!!!
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 603-606-692
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:09:52] "GET /Index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:09:54] "GET /All HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:09:57] "[32mPOST /All HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:09:57] "GET /Index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:09:58] "GET /MatchedInvoices HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:00] "[32mPOST /MatchedInvoices HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:00] "GET /Index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:01] "GET /UnmatchedInvoices HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:02] "[32mPOST /UnmatchedInvoices HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:02] "GET /Index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:03] "GET /UnmatchedSummary HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:05] "[32mPOST /UnmatchedSummary HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:05] "GET /Index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:28] "GET /All HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:29] "[32mPOST /All HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:29] "GET /Index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:30] "GET /MatchedInvoices HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:31] "[32mPOST /MatchedInvoices HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:31] "GET /Index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:32] "GET /UnmatchedInvoices HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:33] "[32mPOST /UnmatchedInvoices HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:33] "GET /Index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:34] "GET /UnmatchedSummary HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:36] "[32mPOST /UnmatchedSummary HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 00:10:36] "GET /Index HTTP/1.1" 200 -
