@@ -8,7 +8,7 @@ import logging
 warnings.filterwarnings("ignore")
 
 class InvoiceProcess:
-    #Class Init to Initialize logging and connecit to database
+    #Class Init to Initialize logging and Database connectivity
     def __init__(self):
         connection =''
         logging.basicConfig(level=logging.INFO, filename='InvoiceProcessing.log', filemode='w')
@@ -37,7 +37,7 @@ class InvoiceProcess:
     # Fetch all the Input files(CSV files) from the input directory and Call the Execution for Read, Load files into database and Move processed files
     def readInfiles(self) -> object:
         try:
-            Inpath = "/Users/sureshcs/PycharmProjects/input"
+            Inpath = "../input"
             for file in os.listdir(Inpath):
                 if file.endswith(".csv"):
                     Infile_path = Inpath+'/'+file
@@ -51,7 +51,7 @@ class InvoiceProcess:
     # Move the Processed Invoice File into Output directory
     def writeOutfile(self,Infile_path) -> object:
         try:
-            outpath = "/Users/sureshcs/PycharmProjects/output"
+            outpath = "../output"
             shutil.move(Infile_path, outpath)
         except:
             logging.DEBUG("Failed to Move the file to output folder")
@@ -115,7 +115,7 @@ class InvoiceProcess:
                         allRecordsSetJson = allRecordsDF.to_json()
                         parsedAll = json.loads(allRecordsSetJson)
                         print(parsedAll)
-                        with open('/Users/sureshcs/PycharmProjects/output/AllRecords.json', 'w') as outfile:
+                        with open('../output/AllRecords.json', 'w') as outfile:
                             json.dump(parsedAll, outfile)
                     logging.info("Fetch All records method executed successfully including creation of Json file with result set!!!")
                 except:
@@ -146,7 +146,7 @@ class InvoiceProcess:
                         matchedSetJson = matchedDF.to_json()
                         parsedMatch = json.loads(matchedSetJson)
                         print(parsedMatch)
-                        with open('/Users/sureshcs/PycharmProjects/output/MatchedRecords.json', 'w') as outfile:
+                        with open('../output/MatchedRecords.json', 'w') as outfile:
                             json.dump(parsedMatch, outfile)
                         logging.info("Fetch Matched Invoices method executed successfully including creation of Json file with result set!!!")
                 except:
@@ -176,7 +176,7 @@ class InvoiceProcess:
                         unMatchedInvcSetJson = unmatchedDF.to_json()
                         parsedUnMatchInvc = json.loads(unMatchedInvcSetJson)
                         print(parsedUnMatchInvc)
-                        with open('/Users/sureshcs/PycharmProjects/output/UnMatchedInvcRecords.json', 'w') as outfile:
+                        with open('../output/UnMatchedInvcRecords.json', 'w') as outfile:
                             json.dump(parsedUnMatchInvc, outfile)
                         logging.info("Fetch UnMatched Invoices method executed successfully including creation of Json file with result set!!!")
                 except:
@@ -203,7 +203,7 @@ class InvoiceProcess:
                         unMatchedSumSetJson = unmatchedSumDF.to_json()
                         parsedUnMatchSum = json.loads(unMatchedSumSetJson)
                         print(parsedUnMatchSum)
-                        with open('/Users/sureshcs/PycharmProjects/output/UnMatchedSumRecords.json', 'w') as outfile:
+                        with open('../output/UnMatchedSumRecords.json', 'w') as outfile:
                             json.dump(parsedUnMatchSum, outfile)
                         logging.info(
                             "Fetch UnMatched Summary method executed successfully including creation of Json file with result set!!!")
