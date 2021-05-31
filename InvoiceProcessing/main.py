@@ -74,8 +74,8 @@ if __name__ == '__main__':
     p1.readInfiles()
     p1.fetch_all()
     p1.fetch_matchedInvoices()
-    p1.fetch_unmatchedInvocies()
-    p1.fetch_unmatchedSummary()
+    p1.fetch_unMatchedInvoices()
+    p1.fetch_unMatchedSummary()
 
     #Python Flask API app execution
     app.run(debug=True)
