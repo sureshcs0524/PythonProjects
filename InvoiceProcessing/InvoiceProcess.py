@@ -153,7 +153,7 @@ class InvoiceProcess:
                     logging.DEBUG("Fetch Matched Invoices records method failed")
 
     # Fetch all Unmatched Records of Invoices & Payment - Calculate Debit and Credit Amounts
-    def fetch_unmatchedInvocies(self) -> object:
+    def fetch_unMatchedInvoices(self) -> object:
         if not self.connection.open:
             self.connect()
             with self.connection:
@@ -182,7 +182,7 @@ class InvoiceProcess:
                 except:
                         logging.DEBUG("Fetch UnMatched Invoices records method failed")
     # Fetch all Unmatched Records of Invoices & Payment - Group by Recovery & Calculate Debit and Credit Amounts
-    def fetch_unmatchedSummary(self) -> object:
+    def fetch_unMatchedSummary(self) -> object:
         if not self.connection.open:
             self.connect()
             with self.connection:
